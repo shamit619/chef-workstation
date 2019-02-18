@@ -1,0 +1,2 @@
+source "https://supermarket.chef.io"
+cookbook 'grafana', '~> 3.0.1'

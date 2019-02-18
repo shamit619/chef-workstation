@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {
+    height: 0;
+    padding: 0; /* remove any pre-existing padding, just in case */
+    padding-bottom: 46%; /* for a 4:3 aspect ratio */
+    background-image: url(background_iac3.jpg);
+    background-position: center center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.button_submit_chef_server {
+     position: absolute; 
+	 left: 830px; 
+	 top: 268px; 
+	 color: white; 
+	 background-color: #00506b; 
+	 font-size: 17px;  
+	 border-radius: 8px;
+}
+
+.button_submit_upload_cookbooks {
+     position: absolute; 
+	 left: 750px; 
+	 top: 322px; 
+	 color: white; 
+	 background-color: #00506b; 
+	 font-size: 17px;  
+	 border-radius: 8px;
+}
+
+.button_submit_set_nodes {
+     position: absolute; 
+	 left: 680px; 
+	 top: 386px; 
+	 color: white; 
+	 background-color: #00506b; 
+	 font-size: 17px;  
+	 border-radius: 8px;
+}
+
+.button_submit_deploy_cookbooks {
+     position: absolute; 
+	 left: 830px; 
+	 top: 457px; 
+	 color: white; 
+	 background-color: #00506b; 
+	 font-size: 17px;  
+	 border-radius: 8px;
+}
+
+.button_submit_update_jenkins {
+     position: absolute; 
+	 left: 1077px; 
+	 top: 158px; 
+	 color: white; 
+	 background-color: #00506b; 
+	 font-size: 12px;  
+	 border-radius: 8px;
+
+}
+</style>
+<body>
+
+
+
+<form method="GET" action="https://myt81jbhh9.execute-api.us-east-1.amazonaws.com/prod/Terraform-trigger">
+  <input type="hidden" name="key1" value="value1" />
+  <input type="hidden" name="key2" value="value2" />
+  <input class="button_submit_chef_server" type="submit" name="submit" value="Go!" />
+</form>
+
+<form method="GET" action="https://mkq4jm7ew2.execute-api.us-east-1.amazonaws.com/prod/Upload-cookbook">
+<input style="position: absolute; left: 600px; top: 354px;" type="text" name="cookbookName" size="15"><br>
+<input class="button_submit_upload_cookbooks" type="submit" name="submit1" value="Go!">
+</form>
+
+<form method="GET" action="https://x97zcnfhwg.execute-api.us-east-1.amazonaws.com/prod/Node_setup">
+<input style="position: absolute; left: 562px; top: 420px;" type="text" name="nodeCount" size="5"><br>
+<input style="position: absolute; left: 747px; top: 420px;" type="text" name="deployTag" size="5"><br>
+<input class="button_submit_set_nodes" type="submit" name="submit2" value="Go!">
+</form>
+
+<form method="GET" action="https://edh06j4b5i.execute-api.us-east-1.amazonaws.com/prod/Deploy_cookbook">
+<input style="position: absolute; left: 590px; top: 493px;" type="text" name="cookbookName2" size="5"><br>
+<input style="position: absolute; left: 766px; top: 492px;" type="text" name="deployTag2" size="5"><br>
+<input class="button_submit_deploy_cookbooks" type="submit" name="submit3" value="Go!">
+</form>
+
+<form method="GET" action="https://kra6qqiowc.execute-api.us-east-1.amazonaws.com/prod/update_plugin_jenkins">
+  <input class="button_submit_update_jenkins" type="submit" name="submit4" value="Update Jenkins!" />
+</form>
+
+</body>
+</html>
+</p>
