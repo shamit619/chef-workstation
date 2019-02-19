@@ -12,7 +12,7 @@ echo "chef:$Chef_Node_Count" >> /home/ec2-user/node.txt
 node_count=$(( $Chef_Node_Count + $count ))
 echo $node_count
 echo "node:$node_count" >> /home/ec2-user/node.txt
-chef_private_ip=$(aws ec2 describe-instances --filter "Name=tag:Name,Values=chef server" | grep "PrivateDnsName" | sed -n "1p" | awk -F':' '{print $2}' | tr -d ['",'] | tr -d [:space:])
+chef_private_ip=$(aws ec2 describe-instances --filter "Name=tag:Name,Values=chef server" --region "us-east-1" | grep "PrivateDnsName" | sed -n "1p" | awk -F':' '{print $2}' | tr -d ['",'] | tr -d [:space:])
 echo "chef-ip:$chef_private_ip" >> /home/ec2-user/node.txt
 if [ "$Chef_Node_Count" == "0" ];
 then
